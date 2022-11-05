@@ -15,4 +15,16 @@ module.exports = withFaust({
     locales: ['en'],
     defaultLocale: 'en',
   },
+  rewrites: [
+    {
+      source: "/:path*",
+      has: [
+        {
+          type: "host",
+          value: "test-pages.meetin.homes"
+        },
+      ],
+      destination: "/test-pages/:path*"
+    }
+  ]
 });
