@@ -17,8 +17,8 @@ module.exports = withFaust({
   },
   rewrites: [
     {
-      source: "/:path*",
-      destination: "https://:path*.meetin.homes"
+      source: "/:path*/*",
+      destination: "https://:path*.meetin.homes/*"
     }
   ]
 });
